@@ -1,0 +1,225 @@
+i.maintain {
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* i.icon {
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  &.anzhuang {
+    background-image: url('/assets/images/icon_anzhuang.png');
+  }
+  &.baoyang {
+    background-image: url('/assets/images/icon_baoyang.png');
+  }
+  &.dingdan {
+    background-image: url('/assets/images/icon_dingdan.png');
+  }
+  &.dingdan.dizhi {
+    background-image: url('/assets/images/icon_dingdan_dizhi.png');
+  }
+  &.dingdan.press {
+    background-image: url('/assets/images/icon_dingdan_press.png');
+  }
+  &.dingdan.shijian {
+    background-image: url('/assets/images/icon_dingdan_shijian.png');
+  }
+  &.dizhi {
+    background-image: url('/assets/images/icon_dizhi.png');
+  }
+  &.down {
+    background-image: url('/assets/images/icon_down.png');
+  }
+  &.jia {
+    background-image: url('/assets/images/icon_jia.png');
+  }
+  &.jian {
+    background-image: url('/assets/images/icon_jian.png');
+  }
+  &.right {
+    background-image: url('/assets/images/icon_right.png');
+  }
+  &.shanchu {
+    background-image: url('/assets/images/icon_shanchu.png');
+  }
+  &.shouye {
+    background-image: url('/assets/images/icon_shouye.png');
+  }
+  &.shouye.press {
+    background-image: url('/assets/images/icon_shouye_press.png');
+  }
+  &.weixiu {
+    background-image: url('/assets/images/icon_weixiu.png');
+  }
+  &.shangcheng {
+    background-image: url('/assets/images/icon_shangcheng.png');
+  }
+  &.wode {
+    background-image: url('/assets/images/icon_wode.png');
+  }
+  &.wode.dizhi {
+    background-image: url('/assets/images/icon_wode_dizhi.png');
+  }
+  &.wode.fuwudingdan {
+    background-image: url('/assets/images/icon_wode_fuwudingdan.png');
+  }
+  &.wode.guanyu {
+    background-image: url('/assets/images/icon_wode_guanyu.png');
+  }
+  &.wode.kefu {
+    background-image: url('/assets/images/icon_wode_kefu.png');
+  }
+  &.wode.press {
+    background-image: url('/assets/images/icon_wode_press.png');
+  }
+  &.wode.shangchengdingdan {
+    background-image: url('/assets/images/icon_wode_shangchengdingdan.png');
+  }
+  &.xiadanchenggong {
+    background-image: url('/assets/images/icon_xiadanchenggong.png');
+  }
+  &.xiugai {
+    background-image: url('/assets/images/icon_xiugai.png');
+  }
+  &.zhuangtai_1 {
+    background-image: url('/assets/images/icon_zhuangtai_1_1.png');
+  }
+  &.zhuangtai_2 {
+    background-image: url('/assets/images/icon_zhuangtai_2_1.png');
+  }
+  &.zhuangtai_3 {
+    background-image: url('/assets/images/icon_zhuangtai_3_1.png');
+  }
+  &.zhuangtai_4 {
+    background-image: url('/assets/images/icon_zhuangtai_4_1.png');
+  }
+  &.zhifu.weixin {
+    background-image: url('/assets/images/icon_zhifu_weixin.png');
+  }
+  &.zhifu.xianxia {
+    background-image: url('/assets/images/icon_zhifu_xianxia.png');
+  }
+  &.cart {
+    background-image: url('/assets/images/icon_cart.png');
+  }
+  &.commented {
+    background-image: url('/assets/images/icon_commented.png');
+  }
+  &.pic-ched{
+    background-image: url("/assets/images/icon_selected.png");
+  }
+  &.pic-che{
+    background-image: url("/assets/images/icon-check.png");
+  }
+} */
+
+.active .icon {
+  &.zhuangtai_1 {
+    background-image: url('/assets/images/icon_zhuangtai_1_2.png');
+  }
+  &.zhuangtai_2 {
+    background-image: url('/assets/images/icon_zhuangtai_2_2.png');
+  }
+  &.zhuangtai_3 {
+    background-image: url('/assets/images/icon_zhuangtai_3_2.png');
+  }
+  &.zhuangtai_4 {
+    background-image: url('/assets/images/icon_zhuangtai_4_2.png');
+  }
+}
+
+.no-coupon .nc-img{
+  width: 284px;
+  height: 139px;
+  margin:auto;
+  background: url("/assets/images/icon_nocoupon.png") no-repeat center;
+}
+.loginnew .inputbox .username {
+  width:100%;
+  height:38px;
+  border-bottom:1px solid #ddd;
+  margin-bottom:13px;
+  background:url("/assets/images/user_icon.png") no-repeat 11px 9px; 
+  background-size:20px 20px;
+  overflow:hidden
+}
+.loginnew .inputbox .psw {
+  width:100%;
+  height:38px;
+  border-bottom:1px solid #ddd;
+  background:url("/assets/images/pwd_icon.png") no-repeat 11px 9px;
+  background-size:20px 20px;
+  overflow:hidden
+}
+.register .inputbox .phone {
+    width: 100%;
+    height: 38px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 13px;
+    background: url("/assets/images/phone_icon.png") no-repeat 11px 9px;
+    background-size: 20px 20px;
+    overflow: hidden;
+}
+.register .inputbox .code {
+    width: 100%;
+    height: 38px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 13px;
+    background: url("/assets/images/code_icon.png") no-repeat 11px 9px;
+    background-size: 20px 20px;
+    overflow: hidden;
+}
+.register .inputbox .psw {
+    width: 100%;
+    height: 38px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 13px;
+    background: url("/assets/images/reg_pwd_icon.png") no-repeat 11px 9px;
+    background-size: 20px 20px;
+    overflow: hidden;
+}
+.spotDetail .list .star {
+    display: inline-block;
+    background: url("/assets/images/star_icon.png");
+    width: 17px;
+    height: 17px;
+    background-size: 100%;
+    vertical-align: middle;
+}
+.vip .spotDetail .list .star{
+  vertical-align: bottom;
+}
+.spotDetail .list .right {
+    width: 35px;
+    height: 35px;
+    background: url("/assets/images/bingo_icon.png");
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background-size: 100%;
+}
+.spotDetail .list .tit i {
+    background: url("/assets/images/tit_icon.png");
+    background-size: 100%;
+}
+.spotDetail .list .time i {
+    background: url("/assets/images/time_icon.png");
+    background-size: 100%;
+}
+.spotDetail .list .recommend i {
+    background: url("/assets/images/recommend_icon.png");
+    background-size: 100%;
+}
+.spotDetail .list .analysis i {
+    background: url("/assets/images/analysis_icon.png");
+    background-size: 100%;
+    top: 10px;
+}
