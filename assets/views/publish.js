@@ -7,10 +7,7 @@
         methods: {
             getExInfo: function () {
                 //$.showIndicator();
-                var E = window.wangEditor
-                var editor = new E('#editor')
-                // 或者 var editor = new E( document.getElementById('#editor') )
-                editor.create()
+                var ue = UM.getEditor('container');
                 api.get_exinfo().then(function (result) {
                     this.banners = banners;
                     $.hideIndicator();
