@@ -1,11 +1,35 @@
-<div class="products-page content" id="products">
+<div class="products-page content page" id="products">
     <div class="banner">
         <img src="../images/exchange_top_bg.png">
     </div>
     <div class="">
         <div class="content-block-title">您共有<b class="text-danger">0</b>积分</div>
         <div class="content-block">
-            <div class="products-item col-50">
+            <!-- <div class="products-item col-50" v-for="product in products">
+                <div class="product-box">
+                  <div class="tit">
+                      <img v-bind:src="product.src" />
+                      <p v-text="product.tit"></p>
+                  </div>
+                  <div class="txt">
+                    <span><em v-text="product.points">3000</em>积分</span>
+                    <a v-on:click="products$$exchange()" class="button button-fill button-danger">点击兑换</a>
+                  </div>
+                </div>  
+              </div> -->
+              <div class="products-item col-50" v-for="product in products">
+                <div class="product-box">
+                    <div class="tit">
+                      <img v-bind:src="product.src" />
+                      <p v-text="product.tit"></p>
+                  </div>
+                  <div class="txt">
+                    <span><em v-text="product.points">3000</em>积分</span>
+                    <a v-bind:href="'/address.html?id='+product.id" class="button button-fill button-danger">点击兑换</a>
+                  </div>
+                </div>
+              </div><!-- 
+              <div class="products-item col-50">
                 <div class="product-box">
                   <div class="tit">
                       <img src="http://www.ffok.cn/Upload/Product/M840x840_20140724163642463_28652.jpg" />
@@ -13,7 +37,7 @@
                   </div>
                   <div class="txt">
                     <span><em>3000</em>积分</span>
-                    <a v-on:click="products$$exchange()" class="button button-fill button-danger confirm-ok">点击兑换</a>
+                    <a href="#" class="button button-fill button-danger">点击兑换</a>
                   </div>
                 </div>  
               </div>
@@ -28,31 +52,7 @@
                     <a href="#" class="button button-fill button-danger">点击兑换</a>
                   </div>
                 </div>
-              </div>
-              <div class="products-item col-50">
-                <div class="product-box">
-                  <div class="tit">
-                      <img src="http://www.ffok.cn/Upload/Product/M840x840_20140724163642463_28652.jpg" />
-                      <p>曼联主场短袖球衣532849-624大童款</p>
-                  </div>
-                  <div class="txt">
-                    <span><em>3000</em>积分</span>
-                    <a href="#" class="button button-fill button-danger">点击兑换</a>
-                  </div>
-                </div>  
-              </div>
-              <div class="products-item col-50">
-                <div class="product-box">
-                    <div class="tit">
-                      <img src="http://www.ffok.cn/Upload/Product/M705x705_20150828172655969_24204.jpg" />
-                      <p>曼联主场短袖球衣611031-624</p>
-                  </div>
-                  <div class="txt">
-                    <span><em>3000</em>积分</span>
-                    <a href="#" class="button button-fill button-danger">点击兑换</a>
-                  </div>
-                </div>
-              </div>
+              </div> -->
             </div>
             </div>
         </div>

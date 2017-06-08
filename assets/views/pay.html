@@ -2,13 +2,13 @@
     <div class="bar bar-footer bar-footer-big">
         <a class="button button-fill button-big button-danger" v-bind:class="{'disabled':!pay_mode}" v-on:click="pay$$payment()">确认支付</a>
     </div>
-    <div class="content">
+    <div class="pay content">
         <div class="content-block-title">充值金额</div>
         <div class="list-block">
             <ul>
                 <li v-for="amount in amounts">
                     <label class="label-checkbox item-content">
-                        <div class="item-media"><i class="icon zhifu" v-bind:class="amount.key"></i></div>
+                        <div class="item-media"><i class="icon" v-bind:class="amount.key"></i></div>
                         <div class="item-inner">
                             <div class="item-title-row">
                                 <div class="item-title" v-text="amount.text"></div>
@@ -26,11 +26,12 @@
             <ul>
                 <li v-for="pay in pays">
                     <label class="label-checkbox item-content">
-                        <div class="item-media"><i class="icon zhifu" v-bind:class="pay.key"></i></div>
+                        
                         <div class="item-inner">
                             <div class="item-title-row">
-                                <div class="item-title" v-text="pay.text"></div>
-                                <div class="item-subtitle" v-text="pay.desc"></div>
+                                <div class="item-media"><i class="icon zhifu" v-bind:class="pay.key"></i></div>
+                                <!-- <div class="item-title" v-text="pay.text"></div>
+                                <div class="item-subtitle" v-text="pay.desc"></div> -->
                             </div>
                         </div>
                         <input type="radio" name="pay" v-bind:value="pay.key" v-model="pay_mode">

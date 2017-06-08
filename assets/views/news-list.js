@@ -1,47 +1,37 @@
 (function (Vue, $, api) {
     window.vm = new Vue({
-        el: '#pay',
+        el: '#newsList',
         data: {
-            pay_mode: '',
-            order: {
-                total_price: 0
-            },
-            amounts: [
+            news: [
                 {
-                    key: '500',
-                    text: '充值500元',
-                    desc: ''
-                },
-                {
-                    key: '1000',
-                    text: '充值1000元赠200',
-                    desc: ''
-                },
-                {
-                    key: '3000',
-                    text: '充值3000元赠800',
-                    desc: ''
-                },
-                {
-                    key: '5000',
-                    text: '充值5000元赠2000',
-                    desc: ''
-                }
-            ],
-            pays: [
-                {
-                    key: 'weixin',
+                    url: 'weixin',
+                    tit:"圣保罗锦:巴西红牛VS博塔弗SP",
+                    src:"http://www.6383.com/Uploads/Picture/20170309/58c0f9a1b6f31.jpg",
                     text: '微信支付',
-                    desc: ''
+                    desc: '',
+                    time: '2017/3/27 6:00:00'
                 },
                 {
-                    key: 'alipay',
-                    text: '支付宝支付',
-                    desc: ''
+                    url: 'weixin',
+                    tit:"圣保罗锦:巴西红牛VS博塔弗SP2",
+                    src:"http://www.6383.com/Uploads/Picture/20170309/58c0f9a1b6f31.jpg",
+                    text: '微信支付',
+                    desc: '',
+                    time: '2017/3/27 6:00:00'
                 }
             ]
         },
         methods: {
+            pay$$load: function (oid) {
+                //$.showIndicator();
+                api.order_detail(oid).then(function (order) {
+                    this.order = order;
+                    $.hideIndicator();
+                }.bind(this), function (msg) {
+                    $.hideIndicator();
+                    $.alert(msg);
+                })
+            },
             pay$$payment: function () {
                 switch (this.pay_mode) {
                     case 'weixin':
@@ -72,7 +62,7 @@
             }
         },
         ready: init(function () {
-            //$.scope().pay$$load(window.getParam('id'));
+            $.scope().pay$$load(window.getParam('id'));
 
         })
     });

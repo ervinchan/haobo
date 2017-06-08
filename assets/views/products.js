@@ -2,24 +2,20 @@
     window.vm = new Vue({
         el: '#products',
         data: {
-            loading: false,
-            page: 1,
-            filter: 'none',
-            filters: [
+            products: [
                 {
-                    key: 'none',
-                    name: '综合'
+                    "id":1,
+                    "src":"http://www.ffok.cn/Upload/Product/M840x840_20140724163642463_28652.jpg",
+                    "tit":"曼联主场短袖球衣532849-624大童款",
+                    "points":3000
                 },
                 {
-                    key: 'sales',
-                    name: '销量'
-                },
-                {
-                    key: 'price',
-                    name: '价格'
+                    "id":2,
+                    "src":"http://www.ffok.cn/Upload/Product/M840x840_20140724163642463_28652.jpg",
+                    "tit":"曼联主场短袖球衣532849-624",
+                    "points":5000
                 }
-            ],
-            products: []
+            ]
         },
         methods: {
             products$$load: function (callback) {
@@ -46,7 +42,7 @@
                 });
             },
             products$$infinite: function () {
-                this.products$$load(function (products) {
+                /*this.products$$load(function (products) {
                     if (products.length >= 30) {
                         this.page++;
                     } else {
@@ -56,7 +52,7 @@
                     Vue.nextTick(function () {
                         $.refreshScroller();
                     })
-                });
+                });*/
             },
             products$$exchange:function(){
                 $.confirm('确定兑换?', function () {
@@ -81,11 +77,6 @@
                 if ($.scope().loading) return;
                 $.scope().products$$infinite();
             });
-            $(document).on('click','.confirm-ok', function () {
-                  $.confirm('确定兑换?', function () {
-                      $.alert('兑换成功');
-                  });
-              });
         })
     });
 })(Vue, Zepto, jQuery.api);

@@ -9,7 +9,7 @@ $second-font: #666666;
 $border-color: #e4e4e4;
 
 body {
-  font-size: 62.5%;//1rem=20px;
+  font-size: 75%;//1rem=20px;
   background:$content-bg;
   font-family: "微软雅黑","宋体";
 }
@@ -66,7 +66,12 @@ img {
 .page, .page-group {
   background: $page-bg;
 }
-
+.bar-footer~.content{
+  bottom:3rem;
+}
+.bar-footer{
+  height:3rem;
+}
 .swiper-container-horizontal {
   padding-bottom: 0;
   .swiper-slide {
@@ -119,6 +124,9 @@ img {
     }
   }
 }
+.content{
+  overflow: auto !important;
+}
 /*登录*/
 .loginnew {
   width:100%
@@ -135,33 +143,15 @@ img {
   margin:1.5rem auto 1rem;
 }
 
-.loginnew .inputbox .username .uid {
+.loginnew .inputbox .username .uid,.loginnew .inputbox .psw .pswin,.register .inputbox .phone .phonenum,.register .inputbox .code .codenum,.register .inputbox .psw .pswin {
   margin-top:.5rem;
   margin-left:1.75rem;
   width:70%;
   display:inline-block;
-  background:#f8f8f8;
+  background:transparent;
   border:0;
 }
-.loginnew .inputbox .username span {
-  display:inline-block;
-  width:.9rem;
-  height:.9rem;
-  background:url();
-  background-size:cover;
-  float:right;
-  margin-right:.4rem;
-  margin-top:.45rem
-}
-.loginnew .inputbox .psw .pswin {
-  margin-top:.5rem;
-  margin-left:1.75rem;
-  width:70%;
-  display:inline-block;
-  background:#f8f8f8;
-  border:0;
-}
-.loginnew .inputbox .psw span {
+.loginnew .inputbox .username span,.loginnew .inputbox .psw span {
   display:inline-block;
   width:.9rem;
   height:.9rem;
@@ -229,14 +219,6 @@ img {
   background-size:1rem;
   position:relative
 }
-.register .inputbox .phone .phonenum {
-  margin-top:.5rem;
-  margin-left:1.75rem;
-  width:70%;
-  display:inline-block;
-  background:#f8f8f8;
-  border:0;
-}
 .register .inputbox .phone .asend,.register .inputbox .phone .nosend {
   display:inline-block;
   position:absolute;
@@ -246,14 +228,6 @@ img {
   color:#999;
   border:1px solid #999;
   border-radius:.25rem
-}
-.register .inputbox .code .codenum {
-  margin-top:.5rem;
-  margin-left:1.75rem;
-  width:70%;
-  display:inline-block;
-  background:#f8f8f8;
-  border:0;
 }
 .register .inputbox .code span {
   display:inline-block;
@@ -269,20 +243,24 @@ img {
   height:1.9rem;
   border-bottom:1px solid #ddd;
 }
-.register .inputbox .psw .pswin {
-    margin-top: .5rem;
-    margin-left: 1.75rem;
-    width: 70%;
-    display: inline-block;
-    background: #f8f8f8;
-    border: 0;
-}
 /*index.html*/
+.release-btn{
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    background: #F8B317;
+    padding: 5px 10px;
+    color: #fff;
+}
 .vip .expert {
     margin: .5rem 0;
     background: #faf6f1;
     padding: .25rem 0;
     overflow: hidden;
+}
+
+.expert-page .expert{
+  min-height: 100%;
 }
 .vip .expert li {
     width: 20%;
@@ -358,7 +336,7 @@ img {
 }
 .vip .spotDetail .list .tip{
     position: absolute;
-    bottom:5px;
+    bottom:.5rem;
     right: 0;
     padding:3px 5px;
     color: #CA8A26;
@@ -367,6 +345,7 @@ img {
 .vip .spotDetail .list .recommend{
     padding-right: 200px;
 }
+.vip .spotDetail .list .recommend .button{margin-top:.5rem}
 .vip .spotDetail .list .publisher{
     float: right;
     padding-right: .5rem;
@@ -517,6 +496,9 @@ img {
     vertical-align: middle;
 }
 /*news*/
+.news{
+  padding:.3rem;
+}
 .news-list .item-content{
   position: relative;
   padding:.75rem 0 .5rem 6rem;
@@ -552,11 +534,16 @@ img {
   padding:.2rem 0;
 }
 /*pay.html*/
-.list-block .item-content{
+.pay .list-block .item-content{
   padding-right:.75rem;
 }
-#pay .button{
+.pay .button{
   top: 0;
+}
+.item-media .zhifu{
+    width:91px;
+    height:32px;
+    background-size: 100% !important;
 }
 label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkbox, label.label-checkbox input[type=radio]:checked+.item-media i.icon-form-checkbox{
   background:#F6383A
@@ -591,4 +578,20 @@ label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkb
 .products-page .content-block-title b{
   margin:3px;
   color:#F23535;
+}
+
+/*用户中心*/
+.account .file {
+    position: relative;
+    overflow: hidden;
+}
+.account .file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.account .list-block .item-input input{
+  text-align: right;
 }

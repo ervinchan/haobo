@@ -10,7 +10,7 @@
      */
     $.promiseApi = function (api, params, method) {
         var defer = $.Deferred(),
-            uri = $.debug ? 'http://localhost:3000/' : 'http://m.ddjiadian.com/',
+            uri = $.debug ? 'http://localhost:3000/' : '',
             token = $.debug ? '3eb72Q560BYRrvg9ITkrwyjuHX/FjL7hmTn7e9BuWbZ3J/gB1+e3wPsv3CJHQVlp6VHxJzfpAIDMqGcnDJ4i3EywEa9AUQMfy6kb/RpjBEaHup4E' : '';
 
         $.ajax({
@@ -21,6 +21,7 @@
             type: method ? method : "GET",
             dataType: 'JSON',
             cache: false,
+            timeout:10000,
             success: function (r) {
                 /*($.debug ? console.log : $.noop)(r);*/
                 if (r.status == 200) {
@@ -35,7 +36,7 @@
                 }
             },
             error: function (e) {
-                ($.debug ? console.log : $.noop)(e);
+                //$.debug ? console.log(e) : $.noop(e);
                 defer.reject('服务器出错');
             }
         });
@@ -56,12 +57,12 @@
          * @param city int
          * @returns {*}
          */
-        'get_weixin_banner': function (city) {
+        'login_action': function (city) {
             return $.promiseApi('get_weixin_banner', {
                 city: city
             });
         },
-        'get_hot_products': function () {
+        'get_code': function () {
             return $.promiseApi('shop/hots', {});
         },
         /**
@@ -345,7 +346,11 @@
                 sid: sid
             });
         },
-
+        'wx_buy':function(id){
+            return $.promiseApi('get_user_coupons', {
+                sid: id
+            });
+        }
     };
 
 })(document, jQuery);
